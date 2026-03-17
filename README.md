@@ -20,15 +20,16 @@ A trader must liquidate an inventory of lots over a short horizon by sending **M
 
 | File | Description |
 |------|-------------|
-| `Optimal_Execution_with_Stochastic_Delay.pdf` | Original research article |
-| `Summary_FR.pdf` | Résumé critique (français, 7 pages) |
-| `Summary_EN.pdf` | Critical summary (English, 7 pages) |
-| `simulation_fr.py` | Python simulation — French comments & plots |
-| `simulation_en.py` | Python simulation — English comments & plots |
+| `paper/Optimal_Execution_with_Stochastic_Delay.pdf` | Original research article |
+| `summaries/Summary_FR.pdf` | Résumé critique (français, 7 pages) |
+| `summaries/Summary_EN.pdf` | Critical summary (English, 7 pages) |
+| `src/simulation_fr.py` | Python simulation — French comments & plots |
+| `src/simulation_en.py` | Python simulation — English comments & plots |
 
 ## Usage
 
 ```bash
+cd src
 python simulation_en.py
 ```
 
