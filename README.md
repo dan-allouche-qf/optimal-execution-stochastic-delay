@@ -26,20 +26,12 @@ A trader must liquidate an inventory of lots over a short horizon by sending **M
 | `simulation_fr.py` | Python simulation — French comments & plots |
 | `simulation_en.py` | Python simulation — English comments & plots |
 
-## Generated figures
-
-| Figure | Description |
-|--------|-------------|
-| `fig_latence.pdf` | RLOS outperformance vs mean latency |
-| `fig_phi.pdf` | Effect of urgency parameter φ |
-| `fig_latence_dist.pdf` | Exponential vs Gamma latency distributions |
-
 ## Usage
 
 ```bash
 python simulation_en.py
 ```
 
-Generates 3 figures (PDF + PNG) and prints simulation statistics to stdout.
+Prints simulation statistics to stdout and generates figures.
 
 **Dependencies:** `numpy`, `matplotlib`
