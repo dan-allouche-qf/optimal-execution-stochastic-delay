@@ -1,0 +1,12 @@
+# Ignorer tout par défaut
+*
+
+# Exceptions : Ne pas ignorer ces dossiers (pour pouvoir les parcourir et ignorer leur contenu)
+!*/
+
+# Fichiers à garder absolument dans le dépôt git
+!.gitignore
+!README.md
+!Optimal_Execution_Summary.pdf
+!Optimal_Execution_Article.pdf
+!optimal_execution_simulation.py
