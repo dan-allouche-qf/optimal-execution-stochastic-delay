@@ -7,6 +7,8 @@
 # Fichiers à garder absolument dans le dépôt git
 !.gitignore
 !README.md
-!Optimal_Execution_Summary.pdf
-!Optimal_Execution_Article.pdf
-!optimal_execution_simulation.py
+!Summary_FR.pdf
+!Summary_EN.pdf
+!simulation_fr.py
+!simulation_en.py
+!Optimal_Execution_with_Stochastic_Delay.pdf
