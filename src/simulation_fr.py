@@ -13,9 +13,14 @@ Figures produites :
   3. Impact de la distribution de latence (exponentielle vs Gamma)
 """
 
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
+
+# Les figures sont ecrites a la racine du depot (parent de src/).
+OUT_DIR = Path(__file__).resolve().parent.parent
 
 rcParams.update({
     "font.size": 11,
@@ -31,7 +36,7 @@ np.random.seed(42)
 # Paramètres (Table 4 de l'article, fenêtre 9h-9h10)
 # ============================================================
 S0 = 1.09520
-sigma = 2.1e-4
+sigma = 2.1e-4  # reference Table 4 du papier ; prix fondamental non simule ici
 T = 6.0
 M = 10
 tick = 1e-5
@@ -220,8 +225,8 @@ ax1.set_title(r"Surperformance de RLOS ($\varphi = 0$, trader patient)")
 ax1.legend(loc="upper right")
 ax1.grid(True, alpha=0.3)
 fig1.tight_layout()
-fig1.savefig("/Users/danallouche/Documents/Cycle of conf/fig_latence.pdf")
-fig1.savefig("/Users/danallouche/Documents/Cycle of conf/fig_latence.png")
+fig1.savefig(OUT_DIR / "fig_latence.pdf")
+fig1.savefig(OUT_DIR / "fig_latence.png")
 print("\n  -> fig_latence.pdf sauvegardée\n")
 
 
@@ -277,8 +282,8 @@ ax2.annotate("Impatient\n(pas de MLOs spéculatifs)",
              arrowprops=dict(arrowstyle="->", color="#9b2226", lw=1.2))
 
 fig2.tight_layout()
-fig2.savefig("/Users/danallouche/Documents/Cycle of conf/fig_phi.pdf")
-fig2.savefig("/Users/danallouche/Documents/Cycle of conf/fig_phi.png")
+fig2.savefig(OUT_DIR / "fig_phi.pdf")
+fig2.savefig(OUT_DIR / "fig_phi.png")
 print("\n  -> fig_phi.pdf sauvegardée\n")
 
 
@@ -333,8 +338,8 @@ ax3.set_title("Impact de la distribution de latence sur la surperformance")
 ax3.legend(loc="upper right")
 ax3.grid(True, alpha=0.3)
 fig3.tight_layout()
-fig3.savefig("/Users/danallouche/Documents/Cycle of conf/fig_latence_dist.pdf")
-fig3.savefig("/Users/danallouche/Documents/Cycle of conf/fig_latence_dist.png")
+fig3.savefig(OUT_DIR / "fig_latence_dist.pdf")
+fig3.savefig(OUT_DIR / "fig_latence_dist.png")
 print("\n  -> fig_latence_dist.pdf sauvegardée\n")
 
 print("=" * 60)
